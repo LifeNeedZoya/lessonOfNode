@@ -7,7 +7,7 @@ app.use(express.json()); // middleware
 
 const PORT = 8000;
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "success" });
+  res.status(200).json({ message: "success it is working" });
 });
 
 app.post("/api/users", (req, res) => {
@@ -28,6 +28,7 @@ app.post("/api/users", (req, res) => {
 app.put("/api/users/:id", (req, res) => {
   const { userId } = req.params;
   console.log("update user by id");
+
   res.status(200).json({ message: "success" });
 });
 
