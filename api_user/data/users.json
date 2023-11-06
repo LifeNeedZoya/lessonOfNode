@@ -1,1 +1,22 @@
-{"data":[{"name":"Naraa","gmail":"naraa@gmail.com","status":"online"},{"id":"f1d620d1-1228-4e87-9dd5-ed6ae105fef3","name":"Saraa","gmail":"Saraa@gmail.com","status":"offline"}]}
+{
+  "data": [
+    {
+      "id": "9b68dd08-d4e5-437a-b61c-0be9cdeccc96",
+      "avatarUrl": "/images/avatar2.jpg",
+      "firstName": "zoya",
+      "lastName": ".B",
+      "email": "naomibeck0105@gmail.com",
+      "birthDate": "2023-11-16",
+      "department": "human resource"
+    },
+    {
+      "id": "d012aca5-767d-4dbf-ae40-75b5dbd874db",
+      "avatarUrl": "/images/avatar2.jpg",
+      "firstName": "yeye",
+      "lastName": "bb",
+      "email": "naomibeck06487325@gmail.com",
+      "birthDate": "2023-11-02",
+      "department": "human resource"
+    }
+  ]
+}

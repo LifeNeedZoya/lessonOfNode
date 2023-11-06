@@ -12,7 +12,7 @@ export default function Home() {
   const closeForm = () => {
     console.log("Formee");
     setOpen(false);
-    setCount(5);
+    setCount(1);
     setRefresh(!refresh);
   };
 
@@ -21,10 +21,12 @@ export default function Home() {
       (res) => res.json()
     );
     setUserList(users);
+    console.log("userList", userList);
   };
-  const deleteUserById = async () => {
-    const user = await fetch("http://localhost:8000/api/users/:userId");
-  };
+
+  useEffect(() => {
+    getAllUser();
+  }, [refresh]);
 
   return (
     <main className={``}>

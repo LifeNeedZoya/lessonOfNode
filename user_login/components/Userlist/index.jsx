@@ -6,6 +6,7 @@ const Table = ({ users }) => {
   return (
     <div className="w-full overflow-x-auto">
       <table className="table">
+        {console.log("users 2", users)}
         <THead />
         <TBody users={users} />
       </table>
