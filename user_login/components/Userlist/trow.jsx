@@ -1,10 +1,6 @@
 import React from "react";
-import { useState } from "react";
-import Delete from "../Delete";
 
-const TRow = ({ user }) => {
-  const [userId, setUserId] = useState("");
-
+const TRow = ({ user, handleUpdate, handleDelete }) => {
   const getDepartment = (department) => {
     switch (department) {
       case "human resource": {
@@ -30,13 +26,8 @@ const TRow = ({ user }) => {
       }
     }
   };
-
-  const isSureToDelete = () => {
-    setUserId(user.id);
-  };
-
   return (
-    <tr className="hover:bg-slate-700">
+    <tr className="hover:bg-slate-100">
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
@@ -60,11 +51,15 @@ const TRow = ({ user }) => {
       </td>
       <td>{getDepartment(user.department)}</td>
       <td>
-        <button className=" btn btn-warning  mx-2">засах</button>
-        <button className="  btn btn-error  " onClick={isSureToDelete()}>
+        <button
+          className=" btn btn-warning  mx-2"
+          onClick={() => handleUpdate(user.id)}
+        >
+          засах
+        </button>
+        <button className="btn btn-error" onClick={() => handleDelete(user.id)}>
           устгах
         </button>
-        <Delete userId={userId} />
       </td>
     </tr>
   );
